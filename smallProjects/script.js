@@ -201,13 +201,14 @@ document.body.classList.add("dark-theme");
 const main = document.querySelector("#parent") ;
 
 function CreateToaster(config){
-  return function(){
+  return function(str){
     let tost = document.createElement("div") ;
-    tost.className = `bg-gray-800 text-gray-100 inline-block py-2 px-3 rounded-md fixed
+    tost.className = `bg-gray-800 text-gray-100 inline-block py-2 px-3 rounded-md shadow-md 
+    animate-fade-in
     ${config.positionX === "top" ? "top-2":"bottom-2"} 
     ${config.positionY === "right" ? "right-2":"left-2"}` ;
 
-    tost.textContent= config.message ;
+    tost.textContent= str ;
     main.appendChild(tost) ;
     setTimeout(() => {
       main.removeChild(tost) ;
@@ -219,8 +220,11 @@ function CreateToaster(config){
 let toaster = CreateToaster({
   positionX : "top" ,
   positionY: "left",
-  message: "This is a toast notification!",
-  duration: 1
+  duration: 3
 })
 
-toaster() ;
+toaster("This is a toast notification! ") ;
+
+setTimeout(()=>{
+  toaster("Download done! ") ;
+},2000) ;
