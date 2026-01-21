@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="../output.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  
+  <!-- Navbar -->
+  <header class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-teal-400">Homam Ahmad kazimi</h1>
+      <ul class="flex space-x-6">
+        <li class="relative group">
+          <a href="#about" class="hover:text-teal-300">About</a>
+          <div class="absolute bottom-0 h-0.5 w-full bg-teal-300 hidden group-hover:block transition-transform"></div>
+        </li>
+        <li class="relative group">
+          <a href="#projects" class="hover:text-teal-300">Projects</a>
+          <div class="absolute left-0 bottom-0 h-0.5 w-full bg-teal-300 hidden group-hover:block transition-transform"></div>
+        </li>
+        <li class="relative group">
+          <a href="#contact" class="hover:text-teal-300">Contact</a>
+          <div class="absolute left-0 bottom-0 h-0.5 w-full bg-teal-300 hidden group-hover:block transition-transform"></div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <h2 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-teal-400">Homam Ahmad Kazimi</span></h2>
+    <p class="text-lg text-gray-400 max-w-xl">I build creative, modern websites that blend design, functionality, and emerging tech like AI and 3D experiences.</p>
+    <a href="#projects" class="mt-6 px-6 py-3 bg-teal-500 text-black font-semibold rounded-lg hover:bg-teal-400 transition">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-6">About Me</h3>
+    <p class="text-gray-300 leading-relaxed">
+      I am a front-end developer passionate about creating interactive and visually appealing web experiences. 
+      My goal is to combine creative design with powerful code to deliver memorable user experiences.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-gray-800 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8">Projects</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card -->
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <img src="https://via.placeholder.com/400x250" alt="Project" class="rounded-lg mb-4">
+          <h4 class="text-xl font-semibold">Project Name</h4>
+          <p class="text-gray-400 text-sm">Short description about the project and the tech stack used.</p>
+        </div>
+        <!-- Repeat for more projects -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+    <p class="text-gray-400 mb-6">Let's work together or have a coffee chat!</p>
+    <a href="mailto:your@email.com" class="px-6 py-3 bg-teal-500 text-black font-semibold rounded-lg hover:bg-teal-400 transition">
+      Say Hello
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-500 text-center py-6">
+    © 2025 Homam Ahmad Kazimi. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
+
