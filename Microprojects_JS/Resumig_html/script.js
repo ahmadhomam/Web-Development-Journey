@@ -1,23 +1,46 @@
-let input_box = document.querySelector("#search") ;
-const products = document.querySelectorAll(".product")
+let buttons = document.querySelectorAll(".cart_button") ;
+let removes = document.querySelectorAll(".remove")
 
-input_box.value = "nana"
 
-function filter(text){
-    products.forEach(product  => {
-        if(product.dataset.name.toLowerCase().includes(text)){
-            product.style.display = "list-item"
+
+buttons.forEach(button => {
+    button.addEventListener("click",()=>{
+           let quantity = button.parentElement.querySelector(".quantity") ;
+           let total  = button.parentElement.querySelector(".total")
+           let price = button.parentElement.querySelector(".item").getAttribute("data-price")
+           let grandtotal = document.querySelector(".grandtotal")
+
+
+           quantity.textContent ++ ;
+           total.textContent = Number(total.textContent) +  Number(price)
+           grandtotal.textContent= Number(grandtotal.textContent) + Number(price)
+           
+    })
+
+})
+
+
+removes.forEach(remove => {
+    remove.addEventListener("click",()=>{
+        
+        let quantity = remove.parentElement.querySelector(".quantity")
+        let total = remove.parentElement.querySelector(".total")
+        let price  = remove.parentElement.querySelector(".item").getAttribute("data-price")
+        let grandtotal = document.querySelector(".grandtotal")
+
+
+        if(quantity.textContent <=0){
+            alert("No item in the cart")
         }
         else{
-            product.style.display = "none"
+            quantity.textContent-- ;
+            total.textContent = Number(total.textContent) - Number(price)
+            grandtotal.textContent= Number(grandtotal.textContent) - Number(price)
         }
+
+
+
     })
-}
-
-let text = input_box.value.toLowerCase() ;
-filter(text)
-
-input_box.addEventListener("input",(dets) =>{
-    let text = dets.target.value.toLowerCase() ;
-    filter(text) ;
 })
+
+

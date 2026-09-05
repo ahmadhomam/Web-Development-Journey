@@ -7,23 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="main">
-        <h1 class="heading">Q1. Search filter </h1>
-        <div class="search_div">
-            <input id="search" type="text">
-            <ul>
-                <li class="product" data-name="banana">Banana</li>
-                <li class="product" data-name="apple">Apple</li>
-                <li class="product" data-name="Mango">Mango</li>
-                <li class="product" data-name="Guava">Guava</li>
-                <li class="product" data-name="pineapple">Pineapple</li>
-            </ul>
-            
-        </div>
+        <h1>Add items to Cart</h1>
+        <div class="products">
+            <span class="item" data-price = "50000">Laptop - 50000</span>
 
-        <div class="ball"></div>
+            <button class="cart_button">Add to Cart</button>
+            <button class="remove">Remove</button>
+            <span class="quantity">0</span>
+            <span class="total">0</span>
+        </div>
+        <div class="products">
+            <span class="item" data-price = "3000">Jeans - 3000</span>
+            <button class="cart_button">Add to Cart</button>
+            <button class="remove">Remove</button>
+            <span class="quantity">0</span>
+            <span class="total">0</span>
+        </div>
+        <div class="products">
+            <span class="item" data-price = "5000">Shoes - 5000</span>
+            <button class="cart_button">Add to Cart</button>
+            <button class="remove">Remove</button>
+            <span class="quantity">0</span>
+            <span class="total">0</span>
+        </div>
+        <div class="totaldiv">
+            <h2>Grand Total : </h2>
+            <span class="grandtotal">0</span>
+        </div>
     </div>
+    
 
     <script src="script.js"></script>
 </body>
