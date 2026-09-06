@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Color Selector</title>
+    <title>Student Search</title>
 
     <style>
-        #box {
-            width: 250px;
-            height: 120px;
-            border: 2px solid black;
-            margin-top: 15px;
+        .student {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid gray;
+        }
+
+        .highlight {
+            background-color: yellow;
         }
     </style>
 </head>
 
 <body>
 
-    <select id="colorSelect">
-        <option value="">Select Color</option>
-        <option value="red">Red</option>
-        <option value="blue">Blue</option>
-        <option value="green">Green</option>
-    </select>
+    <input type="text" id="search" placeholder="Search student">
 
-    <div id="box"></div>
+    <div class="student">Rahul</div>
+    <div class="student">Aman</div>
+    <div class="student">Rohit</div>
+    <div class="student">Rahul Kumar</div>
+    <div class="student">Zaid</div>
 
     <script src="script.js"></script>
 

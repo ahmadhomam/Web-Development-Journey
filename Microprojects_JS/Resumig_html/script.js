@@ -1,20 +1,28 @@
-let box = document.querySelector("#box")
+let search = document.querySelector("#search")
+let students = document.querySelectorAll(".student")
 
-let select = document.querySelector("#colorSelect")
 
-select.addEventListener("change",(dets) => {
-    console.log(dets)
-    let color = dets.target.value.toLowerCase()   ;
-    if(color == "red"){
-        box.style.backgroundColor = "red"   
-    }
-    else if(color == "blue"){
-        box.style.backgroundColor = "blue"
-    }
-    else if(color == "green"){
-        box.style.backgroundColor = "green"
-    }
-    else{
-        box.style.backgroundColor = "white"
-    }
+search.addEventListener("focus",() => {
+    students.forEach(student => {
+        student.classList.add("highlight")
+    })
+})
+
+search.addEventListener("input",() => {
+    students.forEach(s => {
+        s.classList.remove("highlight")
+    })
+    let text = search.value.toLowerCase()
+    students.forEach(student => {
+        const name = student.textContent.toLowerCase() ;
+        if(name.includes(text)){
+            student.classList.add("highlight")
+        }
+    })
+})
+
+search.addEventListener("blur",() => {
+    students.forEach(s => {
+        s.classList.remove("highlight")
+    })
 })
