@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="main">
-        <h1>Add items to Cart</h1>
-        <div class="products">
-            <span class="item" data-price = "50000">Laptop - 50000</span>
+    <title>Color Selector</title>
 
-            <button class="cart_button">Add to Cart</button>
-            <button class="remove">Remove</button>
-            <span class="quantity">0</span>
-            <span class="total">0</span>
-        </div>
-        <div class="products">
-            <span class="item" data-price = "3000">Jeans - 3000</span>
-            <button class="cart_button">Add to Cart</button>
-            <button class="remove">Remove</button>
-            <span class="quantity">0</span>
-            <span class="total">0</span>
-        </div>
-        <div class="products">
-            <span class="item" data-price = "5000">Shoes - 5000</span>
-            <button class="cart_button">Add to Cart</button>
-            <button class="remove">Remove</button>
-            <span class="quantity">0</span>
-            <span class="total">0</span>
-        </div>
-        <div class="totaldiv">
-            <h2>Grand Total : </h2>
-            <span class="grandtotal">0</span>
-        </div>
-    </div>
-    
+    <style>
+        #box {
+            width: 250px;
+            height: 120px;
+            border: 2px solid black;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <select id="colorSelect">
+        <option value="">Select Color</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <div id="box"></div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
